@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+</head>
+<body class="bg-gray-400 bg-opacity-50 ...">
+    <form class="myform" method="GET" enctype="application/x-www-form-urlencoded" action="/noexiste.html">
+        <form class="pure-form pure-form-aligned">
+            <br>
+            <fieldset>
+                <br>
+                <div class="pure-control-group">
+                    <label for="aligned-name">Nombre:</label>
+                    <input type="text" id="aligned-name" placeholder="Ingrese aqui.." required />
+                    <span class="pure-form-message-inline"></span>
+                </div>
+                <br>
+                <div class="pure-control-group">
+                    <label for="aligned-password">Telefono:</label>
+                    <input type="password" id="aligned-password" placeholder="Ingrese aqui.." required/>
+                </div>
+                <br>
+                <div class="pure-control-group">
+                    <label for="aligned-email">Correo:</label>
+                    <input type="email" id="aligned-email" placeholder="Ingrese aqui.." required/>
+                </div>
+                <br>
+                <div class="pure-control-group">
+                    <label for="aligned-foo">Ciudad:</label>
+                    <input type="text" id="aligned-foo" placeholder="Ingrese aqui.." required/>
+                </div>
+                <br>
+                <div class="pure-controls">
+                    <label for="aligned-cb" class="pure-checkbox">
+                        <input type="checkbox" id="aligned-cb" />  he leido y acepto los terminos:
+                    </label>
+                </div>
+            </fieldset>
+        </form>
+        <br>
+        <fieldset class="border-dashed border-4 border-red-500 ...">
+            <legend>Que Taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="car">
+                    Carrito
+                </label>
+            </p>
+       
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="van">
+                    Suv
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tuktuk">
+                    tuk tuk
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset class="border-dashed border-4 border-green-500 ...">
+            <legend>Extras</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="baby">
+                    Silla de bebe
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="musica">
+                    No regueton
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="sillaruedas">
+                    Silla de ruedas
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <p  class="border-double border-4 border-yellow-500 ...">
+            <label>Dia y hora?
+                <input type="datetime-local" name="fecha_hora" required>
+            </label>
+        </p>
+        <br>
+        <p class="border-double border-4 border-blue-500 ...">
+            <label>Lugar para recojer:
+                <select id="pickup_place" name="pickup_place">
+                    <option value="" selected="selected">Seleccione Opcion</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="Feria">La Feria</option>
+                    <option value="La U">La Universidad</option>
+                    <option value="No_se">Le digo al plebe</option>
+                </select>
+            </label>
+        </p>
+        <br>
+        <p class="border-double border-4 border-blue-500 ...">
+            <label>Dejar en:
+                <select id="pickup_place" name="pickup_place">
+                    <option value="" selected="selected">Seleccione Opcion</option>
+                    <option value="Oficina">El Aeropuerto</option>
+                    <option value="Feria">La playa</option>
+                    <option value="La U">La Biblioteca</option>
+                    <option value="No_se">Barriles</option>
+                </select>
+            </label>
+        </p>
+       <br>
+        <p>
+            <label>Instrucciones especiales
+                <textarea name="comentarios" maxlength="500"></textarea>
+            </label>
+        </p>
+        <br>
+        <button>Hacer registro</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/path/to/tailwind.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-400 bg-opacity-50 ...">
+    <form class="myform" method="GET" enctype="application/x-www-form-urlencoded" action="/noexiste.html">
+        <br>
+        <p>
+            <label>Nombre
+                <input type="text" name="Nombre_cliente" required>
+            </label>
+        </p>
+        <br>
+        <p>
+            <label>Telefono
+                <input type="tel" name="Numero_telefono" required>
+            </label>
+        </p>
+        <br>
+        <p>
+            <label>Email
+                <input type="email" name="Direccion_correo">
+            </label>
+        </p>
+
+        <br>
+        <fieldset class="border-dashed border-4 border-red-500 ...">
+            <legend>Que Taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="car">
+                    Carrito
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="van">
+                    Suv
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tuktuk">
+                    tuk tuk
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset class="border-dashed border-4 border-green-500 ...">
+            <legend>Extras</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="baby">
+                    Silla de bebe
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="musica">
+                    No regueton
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="sillaruedas">
+                    Silla de ruedas
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <p class="border-double border-4 border-yellow-500 ...">
+            <label>Dia y hora?
+                <input type="datetime-local" name="fecha_hora" required>
+            </label>
+        </p>
+        <br>
+        <p class="border-double border-4 border-blue-500 ...">
+            <label>Lugar para recojer:
+                <select id="pickup_place" name="pickup_place" required list="destiono">
+                    <option value="" selected="selected">Seleccione Opcion</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="Feria">La Feria</option>
+                    <option value="La U">La Universidad</option>
+                    <option value="No_se">Le digo al plebe</option>
+                </select>
+            </label>
+        </p>
+        <br>
+        <p class="border-double border-4 border-blue-500 ...">
+            <label>Dejar en:
+                <select id="pickup_place" name="pickup_place" required list="destiono">
+                    <option value="" selected="selected">Seleccione Opcion</option>
+                    <option value="Oficina">El Aeropuerto</option>
+                    <option value="Feria">La playa</option>
+                    <option value="La U">La biblioteca</option>
+                    <option value="No_se">Barriles</option>
+                </select>
+            </label>
+        </p>
+        <br>
+        <p>
+            <label>Instrucciones especiales
+                <textarea name="comentarios" maxlength="500" required></textarea>
+            </label>
+        </p>
+        <br>
+        <p>
+            <button class="bg-red-500 hover:bg-yellow-700">Hacer cita</button>
+        </p>
+    </form>
+</body>
+
+</html>

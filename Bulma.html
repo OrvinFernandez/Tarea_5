@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer formulario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <form class="myform" method="GET" enctype="application/x-www-form-urlencoded" action="/noexiste.html">
+
+        <br>
+        <div class="field">
+            <label class="label">Nombre:</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="e.g Alex Smith">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Telefono:</label>
+            <div class="control">
+                <input class="input" type="tel" placeholder="e.g 58703665">
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label">Correo:</label>
+            <p class="control has-icons-left has-icons-right">
+                <input class="input" type="email" placeholder="e.g forvin198@gmail.com">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </p>
+        </div>
+        <br>
+        <fieldset>
+            <legend>Que Taxi quiere?</legend>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="car">
+                    Carrito
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="van">
+                    Suv
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="radio" name="taxi" required value="tuktuk">
+                    tuk tuk
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Extras</legend>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="baby">
+                    Silla de bebe
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="musica">
+                    No regueton
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" name="extras" value="sillaruedas">
+                    Silla de ruedas
+                </label>
+            </p>
+        </fieldset>
+        <br>
+        <p>
+            <label>Dia y hora?
+                <input type="datetime-local" name="fecha_hora" required>
+            </label>
+        </p>
+        <br>
+
+        <label class="label">Lugar para recojer:</label>
+        <div class="select is-multiple">
+            <select multiple size="4">
+                <option value="Argentina">Oficina</option>
+                <option value="Bolivia">La feria</option>
+                <option value="Brazil">La Universidad</option>
+                <option value="Chile">Le digo al plebe</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <label class="label">Dejar en:</label>
+        <div class="select is-multiple">
+            <select multiple size="4">
+                <option value="Argentina">Aeropuerto</option>
+                <option value="Bolivia">La playa</option>
+                <option value="Brazil">La Bliblioteca</option>
+                <option value="Chile">Barriles</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <div class="field">
+            <label class="label">Instrucciones especiales</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Ingrese aqui......"></textarea>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Acepto los <a href="#">terminos y condiciones</a>
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <label class="radio">
+                    <input type="radio" name="question">
+                    Si
+                </label>
+                <label class="radio">
+                    <input type="radio" name="question">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link">Enviar</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light">Cancel</button>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
